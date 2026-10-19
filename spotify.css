@@ -1,0 +1,236 @@
+body {
+    font-family: "Montserrat", "Helvetica", Arial, sans-serif;
+    background-color: #121212; /* gemini */
+    margin: 0;
+    padding: 40px;
+    display: flex; /* egymás mellé pakolja az adott elemeket */
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+h1, h2 {
+    letter-spacing: 1.5px;  /* a betűk közötti távolság */
+    color: #fdfdfd;
+}
+
+.spotify-kontener {
+    width: 100%;
+    max-width: 1200px;
+}
+
+.zene-oszlop {
+    display: flex;
+    flex-direction: row; /* balról, jobbra kezdi el pakolni az elemeket, egymás mellé */
+    align-items: center;
+    gap: 50px; /* két elem közt a távolság */
+    padding: 20px 0;
+}
+
+.borito-kep {
+    width: 350px;
+    height: 350px;
+    object-fit: cover; /* nem torzul el a kép */
+    border-radius: 16px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+}
+
+.zene-info {
+    display: flex;
+    flex-direction: column; /* fentről, lentre kezdi el pakolni az elemeket, egymás alá */
+    align-items: flex-start; /* függőlegesen, egy oszlopba rendezi egymás alá az elemeket */
+    justify-content: center;
+    text-transform: uppercase;
+}
+
+.album-cime {
+    font-size: 42px;
+    color: transparent;
+    -webkit-text-stroke: 1.5px #fdfdfd;
+    text-transform: uppercase;
+    letter-spacing: 0.75px;
+    margin: 0 0 10px 0;
+}
+
+.zenesz-neve {
+    font-size: 28px;
+    color: #fdfdfd;
+    letter-spacing: 1.5px;
+    margin: 0 0 30px 0;
+}
+
+.gombok {
+    display: flex;
+    gap: 15px;
+}
+
+.gomb {
+    padding: 12px 28px;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+    letter-spacing: 1px;
+    border-radius: 20px;
+    transition: transform 0.2s ease, opacity 0.2s ease; /* gemini */
+}
+
+.gomb:hover {
+    transform: scale(1.04); /* gemini */
+    opacity: 0.9;           /* gemini */
+}
+
+.zöld {
+    background-color: #1db954;
+    color: #ffffff;
+}
+
+.szürke {
+    background-color: transparent;
+    color: #ffffff;
+    border: 1px solid #ffffff;
+}
+
+.stream-section {
+    margin: 30px 0;
+}
+
+.stream-it-your-way {
+    padding: 0;
+    margin-bottom: 15px;
+    font-size: 24px;
+}
+
+.stream-gombok {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+}
+
+.nav-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    background-color: #282828;
+    border-radius: 50%; /* lefaragja a sarkakat */
+    color: #ffffff;
+    font-size: 24px;
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+
+.nav-item:hover {
+    transform: translateY(-3px); /* w3schools */
+    background-color: #3e3e3e;
+}
+
+.nav-item.spotify:hover {
+    color: #1db954;
+}
+
+.nav-item.apple:hover {
+    color: #fa243c;
+}
+
+.nav-item.youtube:hover {
+    color: #ff0000;
+}
+
+.tracklist-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;                     
+    padding: 20px 0;
+}
+
+h2.tracklist {
+    color: #ffffff;
+    font-size: 24px;
+    letter-spacing: 2px;
+    margin-bottom: 12px;        
+}
+
+.zeneszamok {
+    display: flex;
+    justify-content: space-between; /* helyett hagy az elemekt között */
+    align-items: center;
+    width: 100%;                  
+    box-sizing: border-box;       
+    padding: 12px 16px;
+    border-radius: 6px; 
+    transition: background-color 0.2s ease;
+}
+
+.zeneszamok:hover {
+    background-color: lightgrey;
+}
+
+.track-details {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.zeneszamok .cim {
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 600;
+    margin: 0;
+}
+
+.zeneszamok 
+.alkoto,
+.zeneszamok 
+.ido {
+    color: #b3b3b3;
+    font-size: 14px;
+    margin: 0;
+}
+
+.hasonlo-section {
+    margin-top: 40px;
+    width: 100%;
+}
+
+.hasonlo-cim {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.hasonlo-albumok {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    width: 100%;
+    justify-content: flex-start; /* balra igazítja, a "stream it in your wayyel" függőlegesen egy sorba */
+    align-items: flex-start; 
+    flex-wrap: wrap; /* w3schools */
+}
+
+.album-kartya {
+    display: flex;
+    flex-direction: column;
+    width: 180px;
+}
+
+.hasonlo-albumok-kepek {
+    width: 100%;
+    height: 180px;
+    border-radius: 12px;
+    object-fit: cover;
+}
+
+.hasonlo-focim {
+    color: #ffffff;
+    font-weight: bold;
+    margin: 10px 0 4px 0;
+    font-size: 14px;
+}
+
+.hasonlo-alkoto {
+    color: #b3b3b3;
+    font-size: 14px;
+}
